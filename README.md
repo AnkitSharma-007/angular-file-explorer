@@ -6,6 +6,10 @@ An intuitive and dynamic file explorer built with Angular.
 
 https://github.com/user-attachments/assets/2e3e6371-939f-4666-96ac-2b382c044236
 
+# Live Demo
+
+Visit https://angular-file-explorer-eta.vercel.app/ to see the app in action.
+
 # Installation
 
 1. Clone the repository:
