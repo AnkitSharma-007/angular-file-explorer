@@ -1,0 +1,21 @@
+@for(node of nodes; track node){
+<div class="node">
+  <div
+    class="node-item"
+    (click)="toggleExpand(node)"
+    [class.folder]="node.type === 'folder'"
+  >
+    @if(node.type === 'folder'){
+    <span>{{ isExpanded(node) ? "📂" : "📁" }}</span>
+    } @else{
+    <span><i class="{{ getFileIcon(node) }}"></i></span>
+    }
+    {{ node.name }}
+  </div>
+
+  <!-- use `!isExpanded(node)` if you want to keep the folders open at page load.  -->
+  @if(node.type === 'folder' && isExpanded(node)){
+  <app-file-node [nodes]="node.children"></app-file-node>
+  }
+</div>
+}
